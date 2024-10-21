@@ -81,49 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <title>Perfil de Investidor</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <style>
-            .fundo-geral {
-                background-image: url(../img/fundo-geral.jpg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .formulario-investidor {
-                width: 600px;
-                background-color: #1c6944;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-                color: #fff;
-            }
-
-            .formulario-investidor h1 {
-                text-align: center;
-                margin-bottom: 20px;
-                color: #fff;
-            }
-
-            .formulario-investidor label {
-                font-size: 16px;
-                color: #fff;
-            }
-
-            .formulario-investidor .form-group {
-                margin-bottom: 15px;
-            }
-
-            .formulario-investidor .form-check-label {
-                color: #fff;
-            }
-
-            .formulario-investidor button {
-                margin-top: 20px;
-            }
-        </style>
+        <link rel="stylesheet" href="../../formulario.css">
     </head>
     <body>
 
