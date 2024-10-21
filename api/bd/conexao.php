@@ -1,6 +1,6 @@
 <?php
 
-$host = 'br1096.hostgator.com.br/';
+$host = 'br1096.hostgator.com.br';
 $dbname = 'vmsdig03_giggles';
 $username = 'vmsdig03_giggles';
 $password = 'gestao_financ'; 
