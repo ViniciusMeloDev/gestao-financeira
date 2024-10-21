@@ -75,206 +75,206 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Investidor</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .fundo-geral {
-            background-image: url(../img/fundo-geral.jpg);; /* Ajuste o caminho da imagem */
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil de Investidor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            .fundo-geral {
+                background-image: url(../img/fundo-geral.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-        .formulario-investidor {
-            width: 600px;
-            background-color: #1c6944;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            color: #fff;
-        }
+            .formulario-investidor {
+                width: 600px;
+                background-color: #1c6944;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                color: #fff;
+            }
 
-        .formulario-investidor h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #fff;
-        }
+            .formulario-investidor h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #fff;
+            }
 
-        .formulario-investidor label {
-            font-size: 16px;
-            color: #fff;
-        }
+            .formulario-investidor label {
+                font-size: 16px;
+                color: #fff;
+            }
 
-        .formulario-investidor .form-group {
-            margin-bottom: 15px;
-        }
+            .formulario-investidor .form-group {
+                margin-bottom: 15px;
+            }
 
-        .formulario-investidor .form-check-label {
-            color: #fff;
-        }
+            .formulario-investidor .form-check-label {
+                color: #fff;
+            }
 
-        .formulario-investidor button {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
+            .formulario-investidor button {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
 
-<div class="fundo-geral">
-    <div class="formulario-investidor">
-        <h1><i class="fa-solid fa-user"></i> Perfil de Investidor</h1>
-        <form method="POST">
-            <!-- Pergunta 1 -->
-            <div class="form-group">
-                <label>Qual é o seu objetivo principal ao investir?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="objetivo" id="objetivo1" value="conservador">
-                    <label class="form-check-label" for="objetivo1">
-                        a) Preservar meu capital 
-                    </label>
+    <div class="fundo-geral">
+        <div class="formulario-investidor">
+            <h1><i class="fa-solid fa-user"></i> Perfil de Investidor</h1>
+            <form method="POST">
+                <!-- Pergunta 1 -->
+                <div class="form-group">
+                    <label>Qual é o seu objetivo principal ao investir?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="objetivo" id="objetivo1" value="conservador">
+                        <label class="form-check-label" for="objetivo1">
+                            a) Preservar meu capital 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="objetivo" id="objetivo2" value="moderado">
+                        <label class="form-check-label" for="objetivo2">
+                            b) Crescer meu patrimônio de forma gradual 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="objetivo" id="objetivo3" value="arrojado">
+                        <label class="form-check-label" for="objetivo3">
+                            c) Obter o maior retorno possível, mesmo com risco 
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="objetivo" id="objetivo2" value="moderado">
-                    <label class="form-check-label" for="objetivo2">
-                        b) Crescer meu patrimônio de forma gradual 
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="objetivo" id="objetivo3" value="arrojado">
-                    <label class="form-check-label" for="objetivo3">
-                        c) Obter o maior retorno possível, mesmo com risco 
-                    </label>
-                </div>
-            </div>
 
-            <!-- Pergunta 2 -->
-            <div class="form-group">
-                <label>Como você reage a uma queda de 10% no valor do seu investimento?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="reacao" id="reacao1" value="conservador">
-                    <label class="form-check-label" for="reacao1">
-                        a) Fico preocupado e penso em vender 
-                    </label>
+                <!-- Pergunta 2 -->
+                <div class="form-group">
+                    <label>Como você reage a uma queda de 10% no valor do seu investimento?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reacao" id="reacao1" value="conservador">
+                        <label class="form-check-label" for="reacao1">
+                            a) Fico preocupado e penso em vender 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reacao" id="reacao2" value="moderado">
+                        <label class="form-check-label" for="reacao2">
+                            b) Analiso a situação e talvez faça ajustes 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="reacao" id="reacao3" value="arrojado">
+                        <label class="form-check-label" for="reacao3">
+                            c) Vejo como uma oportunidade para investir mais 
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="reacao" id="reacao2" value="moderado">
-                    <label class="form-check-label" for="reacao2">
-                        b) Analiso a situação e talvez faça ajustes 
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="reacao" id="reacao3" value="arrojado">
-                    <label class="form-check-label" for="reacao3">
-                        c) Vejo como uma oportunidade para investir mais 
-                    </label>
-                </div>
-            </div>
 
-            <!-- Pergunta 3 -->
-            <div class="form-group">
-                <label>Com que frequência você acompanha o mercado financeiro?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="frequencia" id="frequencia1" value="conservador">
-                    <label class="form-check-label" for="frequencia1">
-                        a) Raramente, prefiro investimentos mais estáveis 
-                    </label>
+                <!-- Pergunta 3 -->
+                <div class="form-group">
+                    <label>Com que frequência você acompanha o mercado financeiro?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="frequencia" id="frequencia1" value="conservador">
+                        <label class="form-check-label" for="frequencia1">
+                            a) Raramente, prefiro investimentos mais estáveis 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="frequencia" id="frequencia2" value="moderado">
+                        <label class="form-check-label" for="frequencia2">
+                            b) Regularmente, gosto de entender como está o mercado 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="frequencia" id="frequencia3" value="arrojado">
+                        <label class="form-check-label" for="frequencia3">
+                            c) Constantemente, estou sempre atento às mudanças 
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="frequencia" id="frequencia2" value="moderado">
-                    <label class="form-check-label" for="frequencia2">
-                        b) Regularmente, gosto de entender como está o mercado 
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="frequencia" id="frequencia3" value="arrojado">
-                    <label class="form-check-label" for="frequencia3">
-                        c) Constantemente, estou sempre atento às mudanças 
-                    </label>
-                </div>
-            </div>
 
-            <!-- Pergunta 4 -->
-            <div class="form-group">
-                <label>Qual é o prazo médio para alcançar seus objetivos financeiros?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="prazo" id="prazo1" value="conservador">
-                    <label class="form-check-label" for="prazo1">
-                        a) Curto prazo (até 2 anos) 
-                    </label>
+                <!-- Pergunta 4 -->
+                <div class="form-group">
+                    <label>Qual é o prazo médio para alcançar seus objetivos financeiros?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prazo" id="prazo1" value="conservador">
+                        <label class="form-check-label" for="prazo1">
+                            a) Curto prazo (até 2 anos) 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prazo" id="prazo2" value="moderado">
+                        <label class="form-check-label" for="prazo2">
+                            b) Médio prazo (3 a 5 anos) 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prazo" id="prazo3" value="arrojado">
+                        <label class="form-check-label" for="prazo3">
+                            c) Longo prazo (mais de 5 anos) 
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="prazo" id="prazo2" value="moderado">
-                    <label class="form-check-label" for="prazo2">
-                        b) Médio prazo (3 a 5 anos) 
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="prazo" id="prazo3" value="arrojado">
-                    <label class="form-check-label" for="prazo3">
-                        c) Longo prazo (mais de 5 anos) 
-                    </label>
-                </div>
-            </div>
 
-            <!-- Pergunta 5 -->
-            <div class="form-group">
-                <label>Como você descreveria sua tolerância a riscos financeiros?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="risco" id="risco1" value="conservador">
-                    <label class="form-check-label" for="risco1">
-                        a) Baixa, prefiro segurança 
-                    </label>
+                <!-- Pergunta 5 -->
+                <div class="form-group">
+                    <label>Como você descreveria sua tolerância a riscos financeiros?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="risco" id="risco1" value="conservador">
+                        <label class="form-check-label" for="risco1">
+                            a) Baixa, prefiro segurança 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="risco" id="risco2" value="moderado">
+                        <label class="form-check-label" for="risco2">
+                            b) Moderada, aceito riscos controlados 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="risco" id="risco3" value="arrojado">
+                        <label class="form-check-label" for="risco3">
+                            c) Alta, estou disposto a arriscar para maiores retornos 
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="risco" id="risco2" value="moderado">
-                    <label class="form-check-label" for="risco2">
-                        b) Moderada, aceito riscos controlados 
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="risco" id="risco3" value="arrojado">
-                    <label class="form-check-label" for="risco3">
-                        c) Alta, estou disposto a arriscar para maiores retornos 
-                    </label>
-                </div>
-            </div>
 
-            <!-- Pergunta 6 -->
-            <div class="form-group">
-                <label>Como você distribuiria R$ 100.000 em investimentos?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="distribuicao" id="distribuicao1" value="conservador">
-                    <label class="form-check-label" for="distribuicao1">
-                        a) A maior parte em renda fixa, para garantir segurança 
-                    </label>
+                <!-- Pergunta 6 -->
+                <div class="form-group">
+                    <label>Como você distribuiria R$ 100.000 em investimentos?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="distribuicao" id="distribuicao1" value="conservador">
+                        <label class="form-check-label" for="distribuicao1">
+                            a) A maior parte em renda fixa, para garantir segurança 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="distribuicao" id="distribuicao2" value="moderado">
+                        <label class="form-check-label" for="distribuicao2">
+                            b) Um equilíbrio entre renda fixa e variável 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="distribuicao" id="distribuicao3" value="arrojado">
+                        <label class="form-check-label" for="distribuicao3">
+                            c) A maior parte em renda variável, buscando maior retorno 
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="distribuicao" id="distribuicao2" value="moderado">
-                    <label class="form-check-label" for="distribuicao2">
-                        b) Um equilíbrio entre renda fixa e variável 
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="distribuicao" id="distribuicao3" value="arrojado">
-                    <label class="form-check-label" for="distribuicao3">
-                        c) A maior parte em renda variável, buscando maior retorno 
-                    </label>
-                </div>
-            </div>
 
-            <button type="submit" class="btn btn-outline-light btn-block">Enviar Respostas</button>
-        </form>
+                <button type="submit" class="btn btn-outline-light btn-block">Enviar Respostas</button>
+            </form>
+        </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

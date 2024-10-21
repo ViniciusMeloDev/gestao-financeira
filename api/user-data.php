@@ -2,7 +2,6 @@
 // Incluir o arquivo de conexão com o banco de dados
 include '../bd/conexao.php';
 
-// Suponha que o ID do usuário esteja armazenado em uma sessão
 session_start();
 $user_id = $_SESSION['user_id'];
 
@@ -16,7 +15,7 @@ if (isset($user_id)) {
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($usuario) {
-        // Retornar os dados em formato JSON
+        // Retornar os dados em JSON
         echo json_encode([
             'nome' => $usuario['nome'],
             'email' => $usuario['email']

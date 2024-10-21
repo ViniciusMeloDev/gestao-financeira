@@ -39,7 +39,6 @@ if (!isset($_SESSION['user_id'])) {
         <p class="text-white text-center f-300">Aqui você terá informações necessárias para a <strong>segurança da sua vida financeira</strong>.</p>
         <hr>
         
-        <!-- Seção para valores das moedas -->
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -128,20 +127,17 @@ if (!isset($_SESSION['user_id'])) {
             })
             .catch(error => console.error('Erro ao carregar dados do usuário:', error));
 
-        // Função para buscar e exibir valores das moedas em reais
+       
         async function fetchCurrencyValues() {
             try {
-                const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); // API com valores em relação ao dólar
+                const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); 
                 const data = await response.json();
                 const currencyList = document.getElementById('currency-list');
-                
-                // Limpa a lista antes de adicionar novos itens
                 currencyList.innerHTML = '';
 
-                // Adiciona valores das moedas à lista
                 for (const [currency, value] of Object.entries(data.rates)) {
                     const listItem = document.createElement('li');
-                    listItem.textContent = `${currency}: R$ ${(value * data.rates.BRL).toFixed(2)}`; // Converte para BRL
+                    listItem.textContent = `${currency}: R$ ${(value * data.rates.BRL).toFixed(2)}`; 
                     currencyList.appendChild(listItem);
                 }
             } catch (error) {
@@ -149,18 +145,16 @@ if (!isset($_SESSION['user_id'])) {
             }
         }
 
-        // Chama a função para buscar valores das moedas
         fetchCurrencyValues();
 
-        // Configura e exibe o gráfico da Bolsa de Valores
         const ctx = document.getElementById('stockChart').getContext('2d');
         const stockChart = new Chart(ctx, {
-            type: 'line', // Tipo do gráfico
+            type: 'line',
             data: {
-                labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex'], // Dias da semana
+                labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex'],
                 datasets: [{
                     label: 'Índice da Bolsa de Valores',
-                    data: [1000, 1020, 980, 1050, 1100], // Dados fictícios
+                    data: [1000, 1020, 980, 1050, 1100],
                     backgroundColor: 'rgba(0, 179, 89, 0.2)',
                     borderColor: 'rgba(0, 179, 89, 1)',
                     borderWidth: 2,
@@ -171,7 +165,7 @@ if (!isset($_SESSION['user_id'])) {
                 responsive: true,
                 scales: {
                     y: {
-                        beginAtZero: false // Começa do valor mínimo dos dados
+                        beginAtZero: false 
                     }
                 }
             }
